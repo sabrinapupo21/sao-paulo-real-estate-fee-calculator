@@ -114,14 +114,41 @@ button:hover {
 
 .btn-limpar:hover {
   background: #d1d5db;
-}
-/* Responsividade */
+} /* ===================== */
+/* 📱 MOBILE */
+/* ===================== */
 @media (max-width: 480px) {
   .calc-container {
     padding: 20px;
   }
 
   .App h1 {
+    font-size: 1.4rem;
+  }
+}
+/* iPad: 768px até 1023px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .calc-container {
+    transform: scale(1.5); /* aumenta mais o zoom */
+    transform-origin: top center;
+  }
+
+  .App h1 {
+    font-size: 2.5rem; /* título maior */
+    max-width: 690px; /* mesmo max-width do container */
+  }
+
+  .calc-input {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .calc-container p {
     font-size: 1.4rem;
   }
 }
