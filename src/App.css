@@ -1,54 +1,127 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Container principal */
+.App {
   text-align: center;
+  color: #fff;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Título */
+.App h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-h1 {
-  max-width: 800px; /* Define um limite para o título não esticar */
-  margin: 0 auto 2rem; /* Centraliza o bloco do título e dá espaço embaixo */
-  line-height: 1.2; /* Ajusta o espaço entre as linhas se ele quebrar */
-  font-size: 2rem; /* Ajuste opcional para não ficar bruto demais */
-}
-
-/* Ajuste no container da calculadora para acompanhar o título */
+/* Caixa da calculadora */
 .calc-container {
-  display: inline-block; /* Faz o container ter apenas o tamanho do conteúdo */
-  text-align: left; /* Garante que o que estiver dentro comece na esquerda */
+  background: #ffffff;
+  color: #333;
+  padding: 25px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Título interno */
+.calc-container h2 {
+  margin-bottom: 15px;
+  color: #4f46e5;
+}
+
+/* Linha dos inputs */
+.calc-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Inputs */
+.calc-input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.calc-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.4);
+}
+
+/* Botão */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+/* Checkbox */
+.calc-checkbox {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.calc-checkbox input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Resultado */
+.calc-container p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #16a34a;
+}
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-group button {
+  flex: 1;
+}
+
+/* botão principal (mais destaque) */
+.btn-calcular {
+  background: #4f46e5;
+}
+
+.btn-calcular:hover {
+  background: #4338ca;
+}
+
+/* botão secundário (menos chamativo) */
+.btn-limpar {
+  background: #e5e7eb;
+  color: #333;
+}
+
+.btn-limpar:hover {
+  background: #d1d5db;
+}
+/* Responsividade */
+@media (max-width: 480px) {
+  .calc-container {
+    padding: 20px;
+  }
+
+  .App h1 {
+    font-size: 1.4rem;
+  }
 }

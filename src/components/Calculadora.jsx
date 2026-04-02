@@ -5,6 +5,12 @@ function Calculadora() {
   const [financiado, setFinanciado] = useState("");
   const [resultado, setResultado] = useState(null);
   const [primeiraAquisição, setPrimeiraAquisição] = useState(false);
+  const limpar = () => {
+    setImovel("");
+    setFinanciado("");
+    setResultado(null);
+    setPrimeiraAquisição(false);
+  };
   const formatarMoeda = (valor) => {
     const apenasNumeros = valor.replace(/\D/g, "");
     const valorDecimal = Number(apenasNumeros) / 100;
@@ -22,6 +28,10 @@ function Calculadora() {
     const matriculaOficial = 45.88;
     const valorImovelNum = limparValor(imovel);
     const valorFinanciadoNum = limparValor(financiado);
+    if (!valorImovelNum || !valorFinanciadoNum) {
+      alert("Preencha os valores do imóvel e do financiamento.");
+      return;
+    }
     const faixaImovel = dados.find(
       (item) => Number(item.valorMax) >= valorImovelNum,
     );
@@ -65,7 +75,14 @@ function Calculadora() {
             value={financiado}
             onChange={(e) => setFinanciado(formatarMoeda(e.target.value))}
           />
-          <button onClick={calcular}>Calcular</button>
+          <div className="btn-group">
+            <button className="btn-limpar" onClick={limpar}>
+              Limpar
+            </button>
+            <button className="btn-calcular" onClick={calcular}>
+              Calcular
+            </button>
+          </div>
         </div>
         <div className="calc-checkbox">
           <label htmlFor="primeiraAquisição">
