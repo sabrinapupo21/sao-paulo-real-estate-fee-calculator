@@ -1,0 +1,54 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+h1 {
+  max-width: 800px; /* Define um limite para o título não esticar */
+  margin: 0 auto 2rem; /* Centraliza o bloco do título e dá espaço embaixo */
+  line-height: 1.2; /* Ajusta o espaço entre as linhas se ele quebrar */
+  font-size: 2rem; /* Ajuste opcional para não ficar bruto demais */
+}
+
+/* Ajuste no container da calculadora para acompanhar o título */
+.calc-container {
+  display: inline-block; /* Faz o container ter apenas o tamanho do conteúdo */
+  text-align: left; /* Garante que o que estiver dentro comece na esquerda */
+}
