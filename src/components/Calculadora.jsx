@@ -1,5 +1,6 @@
 import { useState } from "react";
-import dados from "../assets/tabela.json";
+import dados from "../assets/tabelaCRI.json";
+import cidades from "../assets/tabelaCities.json";
 function Calculadora() {
   const [imovel, setImovel] = useState("");
   const [financiado, setFinanciado] = useState("");
@@ -96,7 +97,13 @@ function Calculadora() {
           </label>
         </div>
         {resultado !== null && (
-          <p>Custo total do cartório: R$ {resultado.toFixed(2)}</p>
+          <p>
+            Custo total do cartório: R${" "}
+            {resultado.toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </p>
         )}
       </div>
     </>
