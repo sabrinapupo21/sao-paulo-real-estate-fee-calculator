@@ -152,3 +152,54 @@ button:hover {
     font-size: 1.4rem;
   }
 }
+
+.calc-sugestoes {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.calc-sugestoes li {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.calc-sugestoes li:hover {
+  background: #f0f0ff;
+  color: #4f46e5;
+}
+.cidade-select-wrapper {
+  position: relative;
+}
+
+.cidade-input {
+  width: 100%;
+  padding-right: 32px; /* espaço pra seta não ficar em cima do texto */
+  cursor: pointer;
+}
+
+.seta-cidade {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* não atrapalha o clique no input */
+  color: #666;
+  font-size: 0.9rem;
+}
+.calc-sugestoes li.sugestao-ativa {
+  background: #4f46e5;
+  color: white;
+}
